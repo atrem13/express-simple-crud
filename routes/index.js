@@ -3,17 +3,17 @@ import express from 'express';
 import { 
     getAllProducts,
     createProduct,
-    getProdyctById,
+    getProductById,
     updateProduct,
     deleteProduct
 } from '../controllers/Product.js';
 
 const router = express.Router();
 
-router.get('/product', getAllProducts);
-router.get('/product/:id', getProductById);
-router.post('/product', createProduct);
-router.patch('/product/:id', updateProduct);
-router.delete('/product/:id', deleteProduct);
+router.get('/', getAllProducts);
+router.get('/:id', getProductById);
+router.post('/', createProduct);
+router.patch('/:id', updateProduct);
+router.delete('/:id', deleteProduct);
 
 export default router;

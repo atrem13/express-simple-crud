@@ -24,7 +24,7 @@ export const getProductById = async (req, res) => {
 
 export const createProduct = async (req, res) => {
     try{
-        await Poduct.create(req.body);
+        await Product.create(req.body);
         res.json({
             'message' : 'product created'
         });
@@ -35,7 +35,7 @@ export const createProduct = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
     try{
-        await Poduct.update(req.body, {
+        await Product.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -50,7 +50,7 @@ export const updateProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
     try {
-        await Poduct.destroy({
+        await Product.destroy({
             where: {
                 id: req.params.id
             }
